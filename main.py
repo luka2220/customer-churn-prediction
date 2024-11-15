@@ -25,15 +25,15 @@ def load_model(file):
 
 
 # Store all the models
-xgboost_model = load_model("./ml-model/xgb_model.pkl")
-naive_bayes_model = load_model("./ml-model/nb_model.pkl")
-random_forest_model = load_model("./ml-model/rf_model.pkl")
-decision_tree_model = load_model("./ml-model/dt_model.pkl")
-svm_model = load_model("./ml-model/svm_model.pkl")
-knn_model = load_model("./ml-model/knn_model.pkl")
-voting_classifier_model = load_model("./ml-model/voting-clf.pkl")
-xgboost_SMOTE_model = load_model("ml-model/XGBOOST-smote.pkl")
-xgboost_feature_engineered_model = load_model("./ml-model/xgboost-featureEngineered_model.pkl")
+xgboost_model = load_model("model-binaries/xgb_model.pkl")
+naive_bayes_model = load_model("model-binaries/nb_model.pkl")
+random_forest_model = load_model("model-binaries/rf_model.pkl")
+decision_tree_model = load_model("model-binaries/dt_model.pkl")
+svm_model = load_model("model-binaries/svm_model.pkl")
+knn_model = load_model("model-binaries/knn_model.pkl")
+voting_classifier_model = load_model("model-binaries/voting-clf.pkl")
+xgboost_SMOTE_model = load_model("model-binaries/XGBOOST-smote.pkl")
+xgboost_feature_engineered_model = load_model("model-binaries/xgboost-featureEngineered_model.pkl")
 
 
 # Prepare the input data from website for the models
@@ -181,7 +181,7 @@ def generate_email(probability, input_dict, explanation, surname):
 
 st.title("Customer Churn Prediction")
 
-df = pd.read_csv("./ml-model/churn.csv")
+df = pd.read_csv("./churn.csv")
 customers = [f"{row['CustomerId']} - {row["Surname"]}" for _, row in df.iterrows()]
 
 # generating a dropdown with customer id and surname
