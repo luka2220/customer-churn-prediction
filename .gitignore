@@ -2,3 +2,4 @@
 .venv
 ml-model
 .env
+__pycache__
